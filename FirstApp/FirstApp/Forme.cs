@@ -32,8 +32,8 @@ namespace FirstApp
 
         public Forme(int x, int y)
         {
-            Coord.X = x;
-            Coord.Y = y;
+            Coordonnee c = new Coordonnee(x, y);
+            Coord = c;
         }
         #endregion
 
