@@ -62,7 +62,7 @@ namespace FirstApp
 
         public override bool CoordonneeEstDans(Coordonnee c)
         {
-            return ((c.X > Coord.X && c.X < (Coord.X + Cote)) && (c.Y > Coord.Y && c.Y < (Coord.Y + Cote)));
+            return ((c.X >=Coord.X && c.X <=(Coord.X + Cote)) && (c.Y >= Coord.Y && c.Y <= (Coord.Y + Cote)));
         }
 
         public int CompareTo(Carre c)

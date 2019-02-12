@@ -141,11 +141,33 @@ namespace FirstApp
             liste_de_carre.Sort(mon_comparer);
             foreach (Carre c in liste_de_carre)
                 c.Affiche();
-
+            Console.WriteLine();
 
             #endregion
 
+            #region RECHERCHE DANS UNE LISTE
 
+            Carre carre_ref = new Carre(1, 6, 5);
+
+            Console.WriteLine("Recherche des carres avec la meme aire que le carre de reference suivant : ");
+            carre_ref.Affiche();
+            Console.WriteLine();
+
+            List<Carre> recherche_carre = liste_de_carre.FindAll(x => x.Cote == carre_ref.Cote);
+            Console.WriteLine("Liste :");
+            foreach (Carre c in recherche_carre)
+                c.Affiche();
+
+            Console.WriteLine();
+            Console.WriteLine("Recherche des carres contenant le point de reference suivant : ");
+            Coordonnee coord_ref = new Coordonnee(3, 4);
+            Console.WriteLine(coord_ref.ToString());
+
+            recherche_carre = liste_de_carre.FindAll(x => x.CoordonneeEstDans(coord_ref));
+            foreach (Carre c in recherche_carre)
+                c.Affiche();
+
+            #endregion
 
             Console.WriteLine();
             Console.WriteLine("Appuyez sur une touche pour quitter l'application.");

@@ -55,7 +55,7 @@ namespace FirstApp
 
         public override bool CoordonneeEstDans(Coordonnee c)
         {
-            return Math.Sqrt(((c.X - Coord.X) * (c.X - Coord.X)) + ((c.Y - Coord.Y) * (c.Y - Coord.Y))) < Rayon;
+            return Math.Sqrt(((c.X - Coord.X) * (c.X - Coord.X)) + ((c.Y - Coord.Y) * (c.Y - Coord.Y))) <= Rayon;
         }
         #endregion
     }
