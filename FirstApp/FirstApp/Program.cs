@@ -83,8 +83,9 @@ namespace FirstApp
 
             #region FOREACH
             Console.WriteLine("Affichage de la liste grace au foreach...");
-            foreach (Forme f in liste_de_forme)
-                f.Affiche();
+            /*foreach (Forme f in liste_de_forme)
+                f.Affiche();*/
+            Forme.AfficheListe(liste_de_forme);
             Console.WriteLine();
             #endregion
 
@@ -109,7 +110,32 @@ namespace FirstApp
 
             #endregion
 
+            #region TRI DE LISTE
 
+            Console.WriteLine("Creation d'une liste de carre generique...");
+            List<Carre> liste_de_carre = new List<Carre>{
+                carre1,
+                carre2,
+                new Carre(7,3,5),
+                new Carre(1,9,3),
+                new Carre(2,0,4)
+            };
+           /* Carre carre3 = new Carre(7,3,5);
+            Carre carre4 = new Carre(1,9,3);
+            Carre carre5 = new Carre(2,0,4);
+            liste_de_carre.Add(carre3);
+            liste_de_carre.Add(carre4);
+            liste_de_carre.Add(carre5);*/
+
+            foreach(Carre c in liste_de_carre)
+                c.Affiche();
+            Console.WriteLine("Tri de la liste par taille...");
+            liste_de_carre.Sort();
+            foreach(Carre c in liste_de_carre)
+                c.Affiche();
+
+
+	        #endregion
 
 
 

@@ -57,6 +57,12 @@ namespace FirstApp
 
         public abstract void Affiche();
 
+        public static void AfficheListe(List<Forme> l)
+        {
+            foreach (Forme f in l)
+                f.Affiche();
+        }
+
         public abstract bool CoordonneeEstDans(Coordonnee c);
 
         #endregion

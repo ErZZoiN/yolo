@@ -50,7 +50,7 @@ namespace FirstApp
         public Rectangle(Coordonnee c, int longueur, int largeur) : base(c)
         {
             Longueur = longueur;
-            Largeur = argeur;
+            Largeur = largeur;
         }
         #endregion
 

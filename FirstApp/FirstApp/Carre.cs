@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstApp
 {
-    public class Carre : Forme, ISommets
+    public class Carre : Forme, ISommets, IComparable<Carre>
     {
         #region VARIABLE
         private int _cote;
@@ -63,6 +63,11 @@ namespace FirstApp
         public override bool CoordonneeEstDans(Coordonnee c)
         {
             return ((c.X > Coord.X && c.X < (Coord.X + Cote)) && (c.Y > Coord.Y && c.Y < (Coord.Y + Cote)));
+        }
+
+        public int CompareTo(Carre c)
+        {
+            return Cote.CompareTo(c.Cote);
         }
         #endregion
     }
