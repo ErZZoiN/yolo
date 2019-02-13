@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstApp
 {
-    public class Rectangle : Forme, ISommets
+    public class Rectangle : Forme, ISommets, IComparable<Rectangle>
     {
         #region VARIABLE
         private int _longueur;
@@ -52,6 +52,12 @@ namespace FirstApp
             Longueur = longueur;
             Largeur = largeur;
         }
+
+        public Rectangle(int x, int y, int longueur, int largeur) : base(x, y)
+        {
+            Longueur = longueur;
+            Largeur = largeur;
+        }
         #endregion
 
         #region METHODE
@@ -68,6 +74,12 @@ namespace FirstApp
         public override bool CoordonneeEstDans(Coordonnee c)
         {
             return c.X >= Coord.X && c.X <= (Coord.X + Longueur) && c.Y >= Coord.Y && c.Y <= (Coord.Y + Largeur);
+        }
+
+        public int CompareTo(Rectangle r)
+        {
+            int buf = Largeur * Longueur;
+            return buf.CompareTo(r.Largeur * r.Longueur);
         }
         #endregion
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstApp
 {
-    public class Cercle : Forme
+    public class Cercle : Forme, IComparable<Cercle>
     {
         #region VARIABLE
         private int _rayon;
@@ -56,6 +56,11 @@ namespace FirstApp
         public override bool CoordonneeEstDans(Coordonnee c)
         {
             return Math.Sqrt(((c.X - Coord.X) * (c.X - Coord.X)) + ((c.Y - Coord.Y) * (c.Y - Coord.Y))) <= Rayon;
+        }
+
+        public int CompareTo(Cercle c)
+        {
+            return Rayon.CompareTo(c.Rayon);
         }
         #endregion
     }
