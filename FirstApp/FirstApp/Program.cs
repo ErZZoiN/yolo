@@ -139,7 +139,6 @@ namespace FirstApp
             Console.WriteLine();
 
             #endregion
-
             #region RECHERCHE DANS UNE LISTE
 
             Carre carre_ref = new Carre(1, 6, 5);
@@ -266,6 +265,29 @@ namespace FirstApp
 
             Console.WriteLine();
             #endregion
+            #endregion
+
+            #region LISTE DE FORME
+
+            Console.WriteLine("Fusion des listes de formes...");
+
+            foreach (Carre c in liste_de_carre)
+                liste_de_forme.Add(c);
+            foreach (Rectangle c in liste_de_rectangle)
+                liste_de_forme.Add(c);
+            foreach (Cercle c in liste_de_cercle)
+                liste_de_forme.Add(c);
+
+            foreach (Forme f in liste_de_forme)
+                f.Affiche();
+
+            Console.WriteLine();
+            Console.WriteLine("Tri selon l'aire : ");
+            FormeAireComparer mon_comparer_aire = new FormeAireComparer();
+            liste_de_forme.Sort(mon_comparer_aire);
+            foreach (Forme f in liste_de_forme)
+                f.Affiche();
+
             #endregion
 
             Console.WriteLine();

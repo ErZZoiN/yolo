@@ -23,6 +23,11 @@ namespace FirstApp
         {
             get { return 4; }
         }
+
+        public override double Aire
+        {
+            get { return Cote*Cote; }
+        }
         #endregion
 
         #region CONSTRUCTEUR

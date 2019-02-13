@@ -31,6 +31,11 @@ namespace FirstApp
             get { return 4; }
         }
 
+        public override double Aire
+        {
+            get { return Largeur*Longueur; }
+        }
+
         #endregion
 
         #region CONSTRUCTEUR

@@ -18,6 +18,11 @@ namespace FirstApp
             set { _rayon = value; }
             get { return _rayon; }
         }
+
+        public override double Aire
+        {
+            get { return Math.PI * Rayon * Rayon; }
+        }
         #endregion
 
         #region CONSTRUCTEUR
@@ -52,6 +57,7 @@ namespace FirstApp
         {
             Console.WriteLine(ToString());
         }
+
 
         public override bool CoordonneeEstDans(Coordonnee c)
         {

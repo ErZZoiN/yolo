@@ -48,6 +48,7 @@
     <Compile Include="Coordonnee.cs" />
     <Compile Include="Forme.cs" />
     <Compile Include="FormeAbscisseComparer.cs" />
+    <Compile Include="FormeAireComparer.cs" />
     <Compile Include="IEstDans.cs" />
     <Compile Include="ISommets.cs" />
     <Compile Include="Program.cs" />

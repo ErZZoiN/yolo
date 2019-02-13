@@ -17,6 +17,9 @@ namespace FirstApp
         { set { _coordonnee = value; }
           get { return _coordonnee; }
         }
+
+        public abstract double Aire
+        { get; }
         #endregion
 
         #region CONSTRUCTEUR
